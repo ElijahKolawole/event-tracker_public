@@ -2,7 +2,7 @@
 
 #### Table of Contents
 
-## Team Members Fall 2018:
+### Team Members Fall 2018:
     Natanael V. Nistor -- 
 
 ### Description
