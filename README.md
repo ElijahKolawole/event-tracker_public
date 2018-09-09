@@ -16,4 +16,5 @@ _Event tracker is a web application that aims to make it easier for organizers t
 **1. Ammar Huseinspahic -** _Code architecture/lead programmer & UI/UX design_   
  **2. Natanael Nistor -** _Team manager & Documentation lead_   
  **3. Yiet Mai -** _Data modeler & Testing lead_   
- **4. Everyone -** _Client liaison_ 
+ **4. Michael Holtmann -** _Client_   
+ **5. Cengiz Gunay -** _Instructor_
