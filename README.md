@@ -1,27 +1,19 @@
 # student-volunteer-website
 
-#### Table of Contents
-
 ### Team Members Fall 2018:
-    Natanael V. Nistor -- 
+    Natanael V. Nistor -- Yiet Mai --
 
-#### Repository Location 
-https://github.com/soft-eng-practicum/event-tracker
+Click [here](https://github.com/soft-eng-practicum/event-tracker)  to  our repo location
 
-#### Communication
-Discord - (#volunteer-event-system)
-GroupMe - TBA
+**Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk:  
 
-#### Progress Tracking
-TBA
+**Progress Tracking:**  _TBA_
 
-### Description
-Event tracker is a web application that aims to make it easier for organizers to manage events and allow for volunteers to be able to apply for the events all on one platform.
+ **Description:**
+_Event tracker is a web application that aims to make it easier for organizers to manage events and allow for volunteers to be able to apply for the events all on one platform._
 
-### Project Roles
-* Ammar Huseinspahic - Code architecture/Lead Programmer & UI/UX Design
-* Natanael Nistor - Team Manager & Documentation Lead
-* Yiet Mai - Data Modeler & Testing Lead
-* Michael Holtmann - Client
-* Cengiz Gunay - Instructor
-
+#### Project Roles:
+**1. Ammar Huseinspahic -** _Code architecture/lead programmer & UI/UX design_   
+ **2. Natanael Nistor -** _Team manager & Documentation lead_   
+ **3. Yiet Mai -** _Data modeler & Testing lead_   
+ **4. Everyone -** _Client liaison_ 
