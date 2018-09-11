@@ -22,13 +22,13 @@ localhost/api/slots/search.php?s=ggc
 
 ### Slots
 * Read	 - Read.php
- * To see a single slot add '?id=#' to the end. 
+  * To see a single slot add '?id=#' to the end. 
 * Create - Create.php
- * Post to this page with the following variables: event_id, title, description, date, starttime, endtime, created(use current time)
+  * Post to this page with the following variables: event_id, title, description, date, starttime, endtime, created(use current time)
 * Update - Update.php
- * Post to this page with the following variables: id,title, description, date, starttime, endtime
+  * Post to this page with the following variables: id,title, description, date, starttime, endtime
 * Delete - Delete.php
- * Post to this page with the 'id' of the slot you wish to delete
+  * Post to this page with the 'id' of the slot you wish to delete
 * Search - Search.php
- * Add 's=KEYWORD' to search for a keyword. Keyword search is applied to slot title, slot description, and event description.
+  * Add 's=KEYWORD' to search for a keyword. Keyword search is applied to slot title, slot description, and event description.
 
