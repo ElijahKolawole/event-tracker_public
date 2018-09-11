@@ -1,15 +1,23 @@
 # How to use this API
 
+### To run you will need...
+* [Download WAMP](http://www.wampserver.com/en/)
+* Put all API files into a new folder in the WWW directory
+* Create local mysql database
+ * Preferably importing the test database.sql provided(NAME THE DATABASE eventtracker)
+
 ### Description
 The API will return all information in JSON format. You access the information you want via directory then by a respective PHP page. 
 
 Example 1:
 Obtain information about slot with id 4
-```localhost/api/slots/read.php?id=4
+```
+localhost/api/slots/read.php?id=4
 ```
 Example 2:
 Obtain information about all slots related to GGC
-```localhost/api/slots/search.php?s=ggc
+```
+localhost/api/slots/search.php?s=ggc
 ```
 
 ### Slots
