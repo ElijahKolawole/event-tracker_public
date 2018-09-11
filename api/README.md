@@ -10,14 +10,20 @@
 The API will return all information in JSON format. You access the information you want via directory then by a respective PHP page. 
 
 Example 1:
-Obtain information about slot with id 4
+Obtain information about slot with id 2
 ```
-localhost/api/slots/read.php?id=4
+localhost/api/slots/read.php?id=2
+
+OUTPUT:
+{"id":"2","event_id":"1","event_title":"Fake Event","title":"Job 2","description":"Hand out drinks","date":"2018-09-10","starttime":"09:00:00","endtime":"17:00:00"}
 ```
 Example 2:
 Obtain information about all slots related to GGC
 ```
 localhost/api/slots/search.php?s=ggc
+
+OUTPUT:
+{"records":[{"id":"3","title":"Greeter","description":"You'll be greeting people!","date":"2018-09-22","starttime":"10:00:00","endtime":"14:00:00","event_id":"2","event_title":"GGC Event","organization_name":"Georgia Gwinnett College"}]}
 ```
 
 ### Slots
