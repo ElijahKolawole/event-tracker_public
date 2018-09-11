@@ -4,7 +4,7 @@
 * [Download WAMP](http://www.wampserver.com/en/)
 * Put all API files into a new folder in the WWW directory
 * Create local mysql database
- * Preferably importing the test database.sql provided(NAME THE DATABASE eventtracker)
+ * Preferably by importing the test database.sql provided (name the database 'eventtracker')
 
 ### Description
 The API will return all information in JSON format. You access the information you want via directory then by a respective PHP page. 
