@@ -27,6 +27,8 @@ $slot->id = $data->id;
 $slot->title = $data->title;
 $slot->description = $data->description;
 $slot->date= $data->date;
+$slot->min= $data->min;
+$slot->max= $data->max;
 $slot->starttime = $data->starttime;
 $slot->endtime = $data->endtime;
  

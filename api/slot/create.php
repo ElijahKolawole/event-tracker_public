@@ -27,6 +27,8 @@ $slot->description = $data->description;
 $slot->date= $data->date;
 $slot->starttime = $data->starttime;
 $slot->endtime = $data->endtime;
+$slot->min= $data->min;
+$slot->max= $data->max;
 $slot->created = date('Y-m-d H:i:s');
  
 // create the slot

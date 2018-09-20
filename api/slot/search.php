@@ -42,6 +42,8 @@ if($num>0){
             "title" => $title,
             "description" => html_entity_decode($description),
             "date" => $date,
+            "min" => $min,
+            "max" => $max,
             "starttime" => $starttime,
             "endtime" => $endtime,
             "event_id" => $event_id,

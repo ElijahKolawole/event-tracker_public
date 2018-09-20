@@ -34,6 +34,8 @@ if(isset($_GET['id'])){
         "title" => $slot->title,
         "description" => $slot->description,
         "date" => $slot->date,
+        "min" => $slot->min,
+        "max" => $slot->max,
         "starttime" => $slot->starttime,
         "endtime" => $slot->endtime
     
@@ -73,6 +75,8 @@ if(isset($_GET['id'])){
                 "title" => $title,
                 "description" => $description,
                 "date" => $date,
+                "min" => $min,
+                "max" => $max,
                 "starttime" => $starttime,
                 "endtime" => $endtime
                 
@@ -119,6 +123,8 @@ if(isset($_GET['id'])){
                 "title" => $title,
                 "description" => $description,
                 "date" => $date,
+                "min" => $min,
+                "max" => $max,
                 "starttime" => $starttime,
                 "endtime" => $endtime
                 

@@ -7,17 +7,20 @@ class Slot{
  
     // object properties
     public $id;
+    public $event_id;
     public $title;
     public $description;
-
-    public $event_id;
-    public $event_name;
-    public $organization_name;
-
     public $date;
+    public $min;
+    public $max;
     public $starttime;
     public $endtime;
     public $created;
+
+    // referenced properties
+    
+    public $event_name;
+    public $organization_name;
  
     // constructor with $db as database connection
     public function __construct($db){
@@ -29,7 +32,7 @@ class Slot{
     
         // select all query
         $query = "SELECT
-                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.created
+                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
@@ -51,7 +54,7 @@ class Slot{
     
         // select all query
         $query = "SELECT
-                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.created
+                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
@@ -79,7 +82,7 @@ class Slot{
     
         // query to read single record
         $query = "SELECT
-                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.created
+                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
@@ -108,6 +111,8 @@ class Slot{
         $this->date = $row['date'];
         $this->starttime = $row['starttime'];
         $this->endtime = $row['endtime'];
+        $this->min = $row['min'];
+        $this->max = $row['max'];
         $this->event_id = $row['event_id'];
         $this->event_title = $row['event_title'];
     }
@@ -116,12 +121,13 @@ class Slot{
 
     // create product
     function create(){
+
     
         // query to insert record
         $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
-                    event_id=:event_id,title=:title, description=:description, date=:date, starttime=:starttime, endtime=:entime, created=:created";
+                    event_id=:event_id,title=:title, description=:description, date=:date, starttime=:starttime, endtime=:endtime, min=:min, max=:max, created=:created";
     
         // prepare query
         $stmt = $this->conn->prepare($query);
@@ -133,6 +139,8 @@ class Slot{
         $this->date=htmlspecialchars(strip_tags($this->date));
         $this->starttime=htmlspecialchars(strip_tags($this->starttime));
         $this->endtime=htmlspecialchars(strip_tags($this->endtime));
+        $this->min=htmlspecialchars(strip_tags($this->min));
+        $this->max=htmlspecialchars(strip_tags($this->max));
         $this->created=htmlspecialchars(strip_tags($this->created));
     
         // bind values
@@ -142,6 +150,8 @@ class Slot{
         $stmt->bindParam(":date", $this->date);
         $stmt->bindParam(":starttime", $this->starttime);
         $stmt->bindParam(":endtime", $this->endtime);
+        $stmt->bindParam(":min", $this->min);
+        $stmt->bindParam(":max", $this->max);
         $stmt->bindParam(":created", $this->created);
     
         // execute query
@@ -163,7 +173,9 @@ class Slot{
                     description=:description, 
                     date=:date, 
                     starttime=:starttime, 
-                    endtime=:entime
+                    endtime=:entime,
+                    min=:min,
+                    max=:max
                 WHERE
                     id = :id";
     
@@ -176,6 +188,8 @@ class Slot{
         $this->date=htmlspecialchars(strip_tags($this->date));
         $this->starttime=htmlspecialchars(strip_tags($this->starttime));
         $this->endtime=htmlspecialchars(strip_tags($this->endtime));
+        $this->min=htmlspecialchars(strip_tags($this->min));
+        $this->max=htmlspecialchars(strip_tags($this->max));
         $this->id=htmlspecialchars(strip_tags($this->id));
     
         // bind values
@@ -184,6 +198,8 @@ class Slot{
         $stmt->bindParam(":date", $this->date);
         $stmt->bindParam(":starttime", $this->starttime);
         $stmt->bindParam(":endtime", $this->endtime);
+        $stmt->bindParam(":min", $this->min);
+        $stmt->bindParam(":max", $this->max);
         $stmt->bindParam(":id", $this->id);
     
         // execute the query
@@ -222,7 +238,7 @@ class Slot{
     
         // select all query
         $query = "SELECT
-                    e.title as event_title, o.name as organization_name, s.event_id, s.id, s.title, s.description, s.date, s.starttime, s.endtime, s.created
+                    e.title as event_title, o.name as organization_name, s.event_id, s.id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
@@ -259,7 +275,7 @@ class Slot{
     
         // select query
         $query = "SELECT
-                    e.name as s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.created
+                    e.name as s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
