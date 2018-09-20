@@ -173,7 +173,7 @@ class Slot{
                     description=:description, 
                     date=:date, 
                     starttime=:starttime, 
-                    endtime=:entime,
+                    endtime=:endtime,
                     min=:min,
                     max=:max
                 WHERE
@@ -275,12 +275,12 @@ class Slot{
     
         // select query
         $query = "SELECT
-                    e.name as s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
+                    e.title as event_title, s.id, s.event_id, s.title, s.description, s.date, s.starttime, s.endtime, s.min, s.max, s.created
                 FROM
                     " . $this->table_name . " s
                     LEFT JOIN
-                        categories e
-                            ON s.category_id = e.id
+                        events e
+                            ON s.event_id = e.id
                 ORDER BY s.created DESC
                 LIMIT ?, ?";
     
