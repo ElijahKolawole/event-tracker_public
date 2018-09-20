@@ -44,7 +44,8 @@ if(isset($_GET['id'])){
     // make it json format
     print_r(json_encode($slot_arr));
 
-// if specific slot ID not requested then show all slots
+
+// if specific event ID requested
 } elseif(isset($_GET['event_id'])) {
 
 
@@ -88,6 +89,8 @@ if(isset($_GET['id'])){
         echo json_encode($slots_arr);
     }
     
+    
+// if specific slot ID not requested then show all slots
     else{
         echo json_encode(
             array("message" => "No slots found.")
