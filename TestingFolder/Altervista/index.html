@@ -26,6 +26,17 @@ input[type=text], input[type=password] {
     width: 100%;
 }
 .button2 {background-color: #f44336;} /* Red */ 
+.button3 {background-color: #0000FF;} /* Blue */ 
+
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #008080;
+    padding: 10px;
+    text-align: center;
+}
+
 
 button:hover {
     opacity: 0.8;
@@ -62,7 +73,7 @@ span.psw {
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
@@ -76,8 +87,8 @@ span.psw {
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 0% auto 25% auto; /* 5% from the top, 15% from the bottom and centered */
+    background-color: #F2F5A9;
+    margin: 5% auto 25% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
 }
@@ -127,16 +138,17 @@ span.psw {
 </style>
 </head>
 <body>
-
-<h2>Event Tracker Authorization </h2>
+<div class ="center">
+<h2 align: center>Event Tracking System</h2>
 
 <button class = "button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">User Login</button>
 <button class = "button button2" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Organizer Login</button>
-
+<button class = "button button3" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Search Event </button>
+</div>
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/user_login.php">
+  <form class="modal-content animate" method = "post" action="action.php">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="image/userLoginIcon.png" alt="Avatar" class="avatar">
@@ -145,12 +157,12 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Username/Email</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="email" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="passwd" required>
         
-      <button class ="button" type="submit">Login</button>
+      <button class ="button" type="submit" name="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -165,7 +177,7 @@ span.psw {
 
 <div id="id02" class="modal">
   
-    <form class="modal-content animate" action="/organizer_login.php">
+    <form class="modal-content animate" method = "get" action="seff">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         <img src="image/organizerLoginIcon.png" alt="Avatar" class="avatar">
@@ -179,15 +191,39 @@ span.psw {
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
           
-        <button class="button" type="submit2">Login</button>
+        <button class="button " type="submit" name="submit2" >Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
       </div>
-  
+      
+      
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+      
+      
+      <div id="id03" class="modal">
+  
+  <form class="modal-content animate" action="action.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="image/eventsIcon.png" alt="Avatar" class="avatar">
+      <h3>Search Events</h3>
+    </div>
+
+    <div class="container">
+      <label for="EventName"><b>Event Name</b></label>
+      <input type="text" placeholder="Enter EventName" name="ename" required>  
+      <button class ="button" type="submit"  name="submit3 ">Search</button>
+     
+    </div>
+ <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+        
       </div>
     </form>
   </div>
@@ -195,6 +231,8 @@ span.psw {
 // Get the modal
 var modal = document.getElementById('id01');
 var modal = document.getElementById('id02');
+var modal = document.getElementById('id03');
+
 
 
 
