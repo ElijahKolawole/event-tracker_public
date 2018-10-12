@@ -6,7 +6,8 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
  
-// include database and object files
+ 
+// include database and object file
 include_once '../config/database.php';
 include_once '../objects/slot.php';
  
@@ -17,32 +18,23 @@ $db = $database->getConnection();
 // prepare slot object
 $slot = new Slot($db);
  
-// get id of slot to be edited
+// get slot id
 $data = json_decode(file_get_contents("php://input"));
  
-// set ID property of slot to be edited
+// set slot id to be deleted
 $slot->id = $data->id;
  
-// set slot property values
-$slot->title = $data->title;
-$slot->description = $data->description;
-$slot->date= $data->date;
-$slot->min= $data->min;
-$slot->max= $data->max;
-$slot->starttime = $data->starttime;
-$slot->endtime = $data->endtime;
- 
-// update the slot
-if($slot->update()){
+// delete the slot
+if($slot->delete()){
     echo '{';
-        echo '"message": "Slot was updated."';
+        echo '"message": "Slot was deleted."';
     echo '}';
 }
  
-// if unable to update the slot, tell the user
+// if unable to delete the slot
 else{
     echo '{';
-        echo '"message": "Unable to update slot."';
+        echo '"message": "Unable to delete object."';
     echo '}';
 }
 ?>

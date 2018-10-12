@@ -9,39 +9,37 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // get database connection
 include_once '../config/database.php';
  
-// instantiate slot object
-include_once '../objects/slot.php';
+// instantiate event object
+include_once '../objects/event.php';
  
 $database = new Database();
 $db = $database->getConnection();
  
-$slot = new Slot($db);
+$event = new Event($db);
  
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
  
-// set slot property values
-$slot->event_id = $data->event_id;
-$slot->title = $data->title;
-$slot->description = $data->description;
-$slot->date= $data->date;
-$slot->starttime = $data->starttime;
-$slot->endtime = $data->endtime;
-$slot->min= $data->min;
-$slot->max= $data->max;
-$slot->created = date('Y-m-d H:i:s');
+// set event property values
+$event->organization_id = $data->organization_id;
+$event->title = $data->title;
+$event->description = $data->description;
+$event->email = $data->email;
+$event->phone = $data->phone;
+$event->public= $data->public;
+$event->created = date('Y-m-d H:i:s');
  
-// create the slot
-if($slot->create()){
+// create the event
+if($event->create()){
     echo '{';
-        echo '"message": "Slot was created."';
+        echo '"message": "Event was created."';
     echo '}';
 }
  
-// if unable to create the slot, tell the user
+// if unable to create the event, tell the user
 else{
     echo '{';
-        echo '"message": "Unable to create slot."';
+        echo '"message": "Unable to create event."';
     echo '}';
 }
 ?>

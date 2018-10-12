@@ -5,28 +5,28 @@ header("Content-Type: application/json; charset=UTF-8");
  
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/slot.php';
+include_once '../objects/event.php';
  
-// instantiate database and slot object
+// instantiate database and event object
 $database = new Database();
 $db = $database->getConnection();
  
 // initialize object
-$slot = new Slot($db);
+$event = new Event($db);
  
 // get keywords
 $keywords=isset($_GET["s"]) ? $_GET["s"] : "";
  
-// query slots
-$stmt = $slot->search($keywords);
+// query events
+$stmt = $event->search($keywords);
 $num = $stmt->rowCount();
  
 // check if more than 0 record found
 if($num>0){
  
-    // slots array
-    $slots_arr=array();
-    $slots_arr["records"]=array();
+    // events array
+    $events_arr=array();
+    $events_arr["records"]=array();
  
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -37,29 +37,26 @@ if($num>0){
         // just $name only
         extract($row);
  
-        $slot_item=array(
+        $event_item=array(
             "id" => $id,
             "title" => $title,
             "description" => html_entity_decode($description),
-            "date" => $date,
-            "min" => $min,
-            "max" => $max,
-            "starttime" => $starttime,
-            "endtime" => $endtime,
-            "event_id" => $event_id,
-            "event_title" => $event_title,
-            "organization_name" => $organization_name
+            "email" => $email,
+            "phone" => $phone,
+            "public" => $public,
+            "organization_id" => $organization_id,
+            "org_name" => $org_name
         );
  
-        array_push($slots_arr["records"], $slot_item);
+        array_push($events_arr["records"], $event_item);
     }
  
-    echo json_encode($slots_arr);
+    echo json_encode($events_arr);
 }
  
 else{
     echo json_encode(
-        array("message" => "No slots found.")
+        array("message" => "No events found.")
     );
 }
 ?>

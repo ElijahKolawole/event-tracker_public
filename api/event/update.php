@@ -8,41 +8,39 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
  
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/slot.php';
+include_once '../objects/event.php';
  
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
  
-// prepare slot object
-$slot = new Slot($db);
+// prepare event object
+$event = new Event($db);
  
-// get id of slot to be edited
+// get id of event to be edited
 $data = json_decode(file_get_contents("php://input"));
  
-// set ID property of slot to be edited
-$slot->id = $data->id;
+// set ID property of event to be edited
+$event->id = $data->id;
  
-// set slot property values
-$slot->title = $data->title;
-$slot->description = $data->description;
-$slot->date= $data->date;
-$slot->min= $data->min;
-$slot->max= $data->max;
-$slot->starttime = $data->starttime;
-$slot->endtime = $data->endtime;
+// set event property values
+$event->title = $data->title;
+$event->description = $data->description;
+$event->email= $data->email;
+$event->phone= $data->phone;
+$event->public = $data->public;
  
-// update the slot
-if($slot->update()){
+// update the event
+if($event->update()){
     echo '{';
-        echo '"message": "Slot was updated."';
+        echo '"message": "Event was updated."';
     echo '}';
 }
  
-// if unable to update the slot, tell the user
+// if unable to update the event, tell the user
 else{
     echo '{';
-        echo '"message": "Unable to update slot."';
+        echo '"message": "Unable to update event."';
     echo '}';
 }
 ?>
