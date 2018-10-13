@@ -1,7 +1,7 @@
 # student-volunteer-website
 
 ### Team Members Fall 2018:
-    Natanael V. Nistor -- Yiet Mai --
+    Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
 
 Click [here](https://github.com/soft-eng-practicum/event-tracker)  to  our repo location
 

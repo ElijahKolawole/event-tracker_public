@@ -4,7 +4,7 @@ class Database{
     // specify your own database credentials
     private $host = "localhost";
     private $db_name = "eventtracker";
-    private $username = "root";
+    private $username = "ymai";
     private $password = "";
     public $conn;
  
