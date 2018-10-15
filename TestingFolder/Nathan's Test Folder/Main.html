@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link href="mainstyle.css" rel="stylesheet" />
+    </head>
+
+<body>
+
+    <div id=mainContainer>
+        <div id ="title"><h1><u>ALL SLOTS</u></h1></></div>
+    </div>
+
+<script>
+
+var apiURL, demo, mytext, obj;
+
+apiURL = 'http://localhost/api/slot/read.php';
+
+mainContainer = document.getElementById("mainContainer");
+
+mytext = getJSONData(apiURL) ;
+
+obj = JSON.parse(mytext);
+
+obj.records.forEach(displaySlots);  4567
+//======================================================================== FUNCTIONS ============================|
+
+function displaySlots(item, index){
+    mainContainer.innerHTML+=
+    "<div class='wrapper'>"+
+        "<div class='box header'>"+item.event_title+"</div>"+
+        "<div class='box sidebar'>Event ID<br/>"+item.event_id+"</div>"+
+        "<div class='box content'>DETAILS:<br/>"+item.description+"</div>"+
+        "<div class='box sidebar2'>DATE:&nbsp&nbsp&nbsp"+convertDate(item.date)+"</div>"+
+        "<div class='box footer'>TIME:&nbsp&nbsp&nbsp"+convertTime(item.starttime)+" --- "+convertTime(item.endtime)+"</div>"+
+    "</div>"+
+    "<br>"+
+    "<hr>"+
+    "<br>"
+    ;
+}
+
+function getJSONData(url) {
+    var resp ;
+    var xmlHttp ;
+
+    resp  = '';
+    xmlHttp = new XMLHttpRequest();
+
+    if(xmlHttp != null){
+        xmlHttp.open( "GET", url, false );
+        xmlHttp.send( null );
+        resp = xmlHttp.responseText;
+    }
+
+    return resp ;
+}
+
+function convertDate(d) {
+    return new Date(d).toDateString();
+}
+
+function convertTime(time) {
+    return new Date("1/1/2000 "+time).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+}
+
+</script>
+
+</body>
+</html>
