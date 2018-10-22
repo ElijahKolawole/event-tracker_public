@@ -44,7 +44,7 @@ read_one_event_html+="<table class='table table-bordered table-hover'>";
      // event Email
      read_one_event_html+="<tr>";
      read_one_event_html+="<td>Email</td>";
-     read_one_event_html+="<td>" + data.emmail + "</td>";
+     read_one_event_html+="<td>" + data.email + "</td>";
  read_one_event_html+="</tr>";
 
   // event Phone
@@ -60,7 +60,7 @@ read_one_event_html+="</table>";
 $("#page-content").html(read_one_event_html);
  
 // chage page title
-changePageTitle("Create Event");
+changePageTitle("Read One Event");
 
 });
     });
