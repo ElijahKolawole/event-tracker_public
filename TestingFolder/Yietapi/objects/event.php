@@ -24,12 +24,19 @@ class Event{
 function read(){
  
     // select all query
-    $query = "SELECT o.name as org_name, e.id, e.organization_id, e.title, e.description, e.email, e.phone, e.created 
+  /*  $query = "SELECT o.name as org_name, e.id, e.organization_id, e.title, e.description, e.email, e.phone, e.created 
         FROM $this->table_name e 
         LEFT JOIN organizations o 
         ON e.organization_id = o.id
-        ORDER BY e.created DESC ";
+        ORDER BY e.created DESC ";   */
  
+ $query = "SELECT s.title as job_title, s.starttime as starttime, s.endtime as endtime, s.min as min_position, s.max as max_position, s.description as job_description, o.name as org_name, e.id, e.organization_id, e.title, e.description, e.email, e.phone, e.created 
+        FROM $this->table_name e 
+        LEFT JOIN organizations o 
+        ON e.organization_id = o.id
+        LEFT JOIN slots s
+        ON e.id = s.event_id
+        ORDER BY e.created DESC ";
     // prepare query statement
     $stmt = $this->conn->prepare($query);
  
@@ -81,11 +88,12 @@ function create(){
 function readOne(){
     
     // query to read single record
-    $query = "SELECT o.name as org_name, e.id, e.organization_id, e.title, e.description, e.email, e.phone, e.created 
+    $query = "SELECT s.title as job_title, s.starttime as starttime, s.endtime as endtime, s.min as min_position, s.max as max_position, s.description as job_description, o.name as org_name, e.id, e.organization_id, e.title, e.description, e.email, e.phone, e.created 
     FROM $this->table_name e 
     LEFT JOIN organizations o 
     ON e.organization_id = o.id
-    
+    LEFT JOIN slots s
+    ON e.id = s.event_id
             WHERE
                 e.id = ?
             LIMIT
@@ -111,6 +119,18 @@ function readOne(){
   //  $this->public = $row['public'];
     $this->organization_id = $row['organization_id'];
     $this->org_name = $row['org_name'];
+
+    $this->job_title = $row['job_title'];
+
+    $this->job_description = $row['job_description'];
+    $this->starttime = $row['starttime'];
+    $this->endtime = $row['endtime'];
+    $this->min = $row['min_position'];
+    $this->max = $row['max_position'];
+
+
+
+
 }
 
 

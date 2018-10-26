@@ -5,7 +5,7 @@ $(document).ready(function(){
         // get event id
 var id = $(this).attr('data-id');
 // read event record based on given ID
-$.getJSON("http://localhost/api/event/read_one.php?id=" + id, function(data){
+$.getJSON("http://localhost/Yietapi/event/read_one.php?id=" + id, function(data){
     // start html
     var read_one_event_html="";
      
@@ -19,7 +19,7 @@ read_one_event_html+="<table class='table table-bordered table-hover'>";
  
     // event ID
     read_one_event_html+="<tr>";
-        read_one_event_html+="<td class='w-30-pct'>Id</td>";
+        read_one_event_html+="<td class='w-30-pct'>Event Id</td>";
         read_one_event_html+="<td class='w-70-pct'>" + data.id + "</td>";
     read_one_event_html+="</tr>";
  
@@ -54,6 +54,62 @@ read_one_event_html+="<table class='table table-bordered table-hover'>";
 read_one_event_html+="</tr>";
  
 read_one_event_html+="</table>";
+
+
+
+// -----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Adding Table for SLOTS  --------- TESTING -------------------------------//
+
+
+read_one_event_html+="<table class='table table-bordered table-hover'>";
+
+
+// Job title
+read_one_event_html+="<tr>";
+read_one_event_html+="<td class='w-30-pct'>Job Title</td>";
+read_one_event_html+="<td class='w-70-pct'>" + data.job_title + "</td>";
+read_one_event_html+="</tr>";
+
+ 
+    // event ID
+    read_one_event_html+="<tr>";
+        read_one_event_html+="<td class='w-30-pct'>Job Description</td>";
+        read_one_event_html+="<td class='w-70-pct'>" + data.job_description + "</td>";
+    read_one_event_html+="</tr>";
+ 
+    // event Oroganization_ID
+    read_one_event_html+="<tr>";
+        read_one_event_html+="<td>Job Start Time</td>";
+        read_one_event_html+="<td>" + data.starttime + "</td>";
+    read_one_event_html+="</tr>";
+ 
+    // event Title
+    read_one_event_html+="<tr>";
+        read_one_event_html+="<td>Job End Time</td>";
+        read_one_event_html+="<td>" + data.endtime + "</td>";
+    read_one_event_html+="</tr>";
+ 
+    // event Description
+    read_one_event_html+="<tr>";
+        read_one_event_html+="<td>Min Position </td>";
+        read_one_event_html+="<td>" + data.min + "</td>";
+    read_one_event_html+="</tr>";
+
+     // event Email
+     read_one_event_html+="<tr>";
+     read_one_event_html+="<td>Max Position</td>";
+     read_one_event_html+="<td>" + data.max + "</td>";
+ read_one_event_html+="</tr>";
+
+  
+
+ 
+ 
+read_one_event_html+="</table>";
+
+
+
 
 
 // inject html to 'page-content' of our app
