@@ -34,7 +34,7 @@ if($event->title!=null){
         "email" => $event->email,
         "phone" => $event->phone,
 
-        // array for show slot
+
 
         "job_title" =>$event->job_title,
         "job_description" =>$event->job_description,
@@ -43,8 +43,7 @@ if($event->title!=null){
         "min" =>$event->min,
         "max" =>$event->max,
 
-
-
+      //  "public" => $event->public
     );
  
     // set response code - 200 OK

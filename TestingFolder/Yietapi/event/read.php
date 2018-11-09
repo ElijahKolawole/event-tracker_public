@@ -42,6 +42,13 @@ if($num>0){
             "description" => $description,
             "email" => $email,
             "phone" => $phone,
+
+            "job_description"=> $job_description,
+            "Job Start Time"=> $starttime,
+            "Job End Time"=> $endtime,
+            "max_position"=> $max_position,
+            "min_position"=> $min_position,
+
           //  "public" => $public
             
         );

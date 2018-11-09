@@ -7,7 +7,7 @@ $(document).ready(function(){
         var keywords = $(this).find(":input[name='keywords']").val();
  
         // get data from the api based on search keywords
-        $.getJSON("http://localhost/api/event/search.php?s=" + keywords, function(data){
+        $.getJSON("http://localhost/Yietapi/event/search.php?s=" + keywords, function(data){
  
             // template in events.js
             readEventsTemplate(data, keywords);

@@ -16,7 +16,7 @@ $.getJSON("http://localhost/Yietapi/event/read_one.php?id=" + id, function(data)
     var phone = data.phone;
    
      
-    // load list oforganizations
+    // load list of organizations
 $.getJSON("http://localhost/Yietapi/organizer/read.php", function(data){
  
     // build 'organizations option' html

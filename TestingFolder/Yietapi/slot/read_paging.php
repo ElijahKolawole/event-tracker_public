@@ -17,7 +17,7 @@ $database = new Database();
 $db = $database->getConnection();
  
 // initialize object
-$event = new event($db);
+$event = new Event($db);
  
 // query events
 $stmt = $event->readPaging($from_record_num, $records_per_page);
