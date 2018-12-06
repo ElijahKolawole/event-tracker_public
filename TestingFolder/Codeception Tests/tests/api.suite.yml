@@ -1,0 +1,13 @@
+class_name: ApiTester
+modules:
+  enabled:
+    - \Helper\Api
+    - Asserts
+   # Add the lines below
+    - REST:
+        # Add your base API URL
+        url: http://localhost/Yietapi/
+        # Can also be a framework module name
+        depends: PhpBrowser
+        # Limits PhpBrowser to JSON or XML
+        part: Json

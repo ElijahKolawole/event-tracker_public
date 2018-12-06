@@ -1,0 +1,28 @@
+[
+    {
+        "event": "suiteStart",
+        "suite": "acceptance",
+        "tests": 1
+    },
+    {
+        "event": "testStart",
+        "suite": "acceptance",
+        "test": [
+            "",
+            "restAPICept: Perform actions and see result"
+        ]
+    },
+    {
+        "event": "test",
+        "suite": "acceptance",
+        "test": [
+            "",
+            "restAPICept: Perform actions and see result"
+        ],
+        "status": "pass",
+        "time": 4.696846008300781e-5,
+        "trace": [],
+        "message": "",
+        "output": ""
+    }
+]
