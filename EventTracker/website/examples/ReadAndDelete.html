@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Displaying JSON information via API using JavaScript</h2>
+<p>This example uses the table "Slots" and displays the data provided by the API to fill the table. It also includes the paging feature as well as ability to delete table a slot.</p>
+
+
+<!-- Create a table to insert data into -->
+<table border="1" padding="1" id="table">
+    <!-- Table Headers -->
+    <tr>
+        <td>Name</td>
+        <td>Event Name</td>
+        <td>Date</td>
+        <td>Start Time</td>
+        <td>End Time</td>
+    </tr>
+</table>
+<button onclick="prevPage()">Previous Page</button>
+<button onclick="nextPage()">Next Page</button>
+<script>
+
+//Creating variables
+var apiURL, demo, mytext, obj;
+
+//Link to API url
+apiURL = 'http://localhost/EventTracker/api/objects/slot/read/';
+var page;
+page = 1;
+//Find the table with the ID 'demo' and set it to var demo for ease of use
+demo = document.getElementById("table");
+
+updateTable();
+
+//Creates a table row for an item passed through it
+function printSlot(item, index){
+    demo.innerHTML += 
+        "<tr name="+item.id+">" +
+            "<td>" + item.title + "</td>" +         //Uses properties from database
+            "<td>" + item.event_title + "</td>" +
+            "<td>" + item.date + "</td>" +
+            "<td>" + convertTime(item.starttime) + "</td>" +
+            "<td>" + convertTime(item.endtime) + "</td>" +
+            //"<td><button onclick='edit(this,"+item.id+")'>Edit</button></td>" +
+            "<td> <form id='delete-form'><input name='id' type='hidden' value="+item.id+" /><button type=submit>X</button></form></td>" +
+        "<tr>";
+}
+
+function updateTable(){
+    //Clears table
+    demo.innerHTML = "<tr><td>Name</td><td>Event Name</td><td>Date</td><td>Start Time</td><td>End Time</td></tr>";
+
+    //Calls getJSON function using the API url and sets the returned JSON to the mytext var
+    mytext = getJSON(apiURL) ;
+
+    //Built in JSON parser function to parse JSON data from API
+    obj = JSON.parse(mytext);
+
+    //For each record in the JSON data do the printSlot method
+    obj.records.forEach(printSlot);
+}
+
+//function for getting next page and previous page
+function nextPage(){
+    page += 1;
+    updateTable();
+}
+function prevPage(){
+    page -= 1;
+    updateTable();
+}
+
+
+
+//Create default table
+
+//Function that takes in the JSON from the website
+function getJSON(url) {
+    var resp ;
+    var xmlHttp ;
+
+    resp  = '';
+    xmlHttp = new XMLHttpRequest();
+
+    if(xmlHttp != null){
+        xmlHttp.open( "GET", url+"?page="+page, false );
+        xmlHttp.send( null );
+        resp = xmlHttp.responseText;
+    }
+
+    return resp ;
+}
+
+$(document).on('submit', '#delete-form', function(){
+    // get form data
+    var form_data=JSON.stringify($(this).serializeObject());
+
+    // submit form data to api
+    $.ajax({
+        url: "http://localhost/EventTracker/api/objects/slot/delete/",
+        type : "POST",
+        contentType : 'application/json',
+        data : form_data,
+        success : function(result) {
+            updateTable();
+            alert(result.message);
+        },
+        error: function(xhr, resp, text) {
+            // show error to console
+            alert("Error in deletion");
+            console.log(xhr, resp, text);
+        }
+    });
+    
+    return false;
+});
+
+// function to make form values to json format
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+//Function that converts time to a AM/PM Format rather than HH:MM:SS 
+//Uses meaninless date to allow for date creation and formatting
+function convertTime(time) {
+    return new Date("1/1/2000 "+time).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+}
+
+</script>
+
+</body>
+</html>
