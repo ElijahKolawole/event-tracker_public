@@ -1,0 +1,4 @@
+tests/api/apiEventReadCest.php:doesID4Exist
+tests/api/apiEventReadCest.php:doesGGCOrgnameExist
+tests/api/apiEventReadCest.php:isPhoneNumber911Used
+tests/api/apiEventReadCest.php:checkForEventByEmail
