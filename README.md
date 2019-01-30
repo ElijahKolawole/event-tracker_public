@@ -25,7 +25,7 @@ In fulfillment of expectation and delivearables for ITEC 3870 : Software Develop
 
 Click [here][] to view
 
-+ ### Team Members Fall 2018:
+### Team Members Fall 2018:
   Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
 
   **Comunication tool:** _Discord_ :smiley: _GroupMe_ :smirk:
@@ -43,7 +43,7 @@ _Event tracker is a web application that aims to make it easier for organizers t
    **4. Michael Holtmann -** _Client_   
    **5. Cengiz Gunay -** _Instructor_
 
-+ ### Team Members Spring 2019:
+### Team Members Spring 2019:
   Aaleyah Joseph -- Adefemi Kolawole -- Dionne Mitchner
   Link to our repository [here][]
 
