@@ -3,11 +3,9 @@
 
 # Student Volunteer Website : An event-tacking app.
 
+## Link to github repository
 
-Click [here](https://github.com/soft-eng-practicum/event-tracker)  to  our repo location
-
-
-
+Click [here][] to view 
 
 ### Team Members Fall 2018:
     Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
@@ -71,7 +69,7 @@ Special thanks to the following faculty members who helped in directing us in th
 
 [comment]: # (the following are footnotes and links)
 
-
+[here]: https://github.com/soft-eng-practicum/event-tracker "Link to Repository"
 [displayA]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayA.PNG  "Load Game Image"
 [displayB]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayB.PNG  "Game UI Image"
 
