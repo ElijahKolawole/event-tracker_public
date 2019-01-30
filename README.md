@@ -3,6 +3,11 @@
 
 # Student Volunteer Website : An event-tacking app.
 
+## Motivation
+Event Tracker App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
+
+In fulfillment of expectation and delivearables for ITEC 3870 : Software Development II.
+
 ## Link to github repository
 
 Click [here][] to view 
@@ -29,10 +34,6 @@ _Event tracker is a web application that aims to make it easier for organizers t
 
     **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk: _Redit_ :smiley:
     
-## Motivation
-Event Tracker App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
-
-In fulfillment of expectation and delivearables for ITEC 3870 : Software Development II.
 
 #### Project Roles:
 **1. Aaleyah Joseph -** _Team Lead_   
