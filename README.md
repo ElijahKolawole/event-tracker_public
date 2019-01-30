@@ -1,7 +1,7 @@
 
 
 
-# Student Volunteer Website : An event- volunteer-tracking app.
+# Student Volunteer Website : A Volunteer-tracking app.
 
 ## Motivation
 Event Volunteer Tracking App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
