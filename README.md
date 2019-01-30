@@ -18,7 +18,7 @@ Click [here][] to view
   **Comunication tool:** _Discord_ :smiley: _GroupMe_ :smirk: 
  
 
-**Progress Tracking:**  _TBA_
+  **Progress Tracking:**  _TBA_
 
  **Description:**
 _Event tracker is a web application that aims to make it easier for organizers to manage events and allow for volunteers to be able to apply for the events all on one platform._
@@ -30,16 +30,17 @@ _Event tracker is a web application that aims to make it easier for organizers t
    **4. Michael Holtmann -** _Client_   
    **5. Cengiz Gunay -** _Instructor_
 
-+ ### Team Members Spring 2018:
++ ### Team Members Spring 2019:
   Aaleyah Joseph -- Adefemi Kolawole -- Dionne Mitchner
+  Link to our repository [here][]
 
   **Comunication tool:** _Discord_ :smiley:  _Reddit_ :smiley: 
     
 
 #### Project Roles:
-   **1. Aaleyah Joseph -** _Team Lead_   
-   **2. Adefemi Kolawole -** _TBA_   
-   **3. Dionne Mitchner -** _TBA_   
+   **1. Aaleyah Joseph -** _Team Maager_, _UI/UX Designer_, _Client Liason_   
+   **2. Adefemi Kolawole -** _Code architecture_, _Testing Lead_   
+   **3. Dionne Mitchner -** _Data Modeller_, _Documentation Lead_   
    **4. Michael Holtmann -** _Client_   
    **5. Cengiz Gunay -** _Instructor_
 
