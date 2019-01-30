@@ -62,13 +62,6 @@ _Event tracker is a web application that aims to make it easier for organizers t
 Special thanks to the following faculty members who helped in directing us in this project.
  *  Dr. Cengiz Gunay
  
-
-
-
-## License & copyright
-
-*© Adefemi Kolawole, May Kamreen, Austin Lomaxx, Georgia Gwinnett College.*
-
 [comment]: # (the following are footnotes and links)
 
 [here]: https://github.com/soft-eng-practicum/event-tracker "Link to Repository"
