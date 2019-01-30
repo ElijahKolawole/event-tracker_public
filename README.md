@@ -25,15 +25,15 @@ In fulfillment of expectation and delivearables for ITEC 3870 : Software Develop
 
 ## Link to github repository
 
-Click [here][] to view 
+Click [here][] to view
 
 + ### Team Members Fall 2018:
   Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
-  
-  **Comunication tool:** _Discord_ :smiley: _GroupMe_ :smirk: 
- 
 
-**Progress Tracking:**  _TBA_
+  **Comunication tool:** _Discord_ :smiley: _GroupMe_ :smirk:
+
+
+  **Progress Tracking:**  _TBA_
 
  **Description:**
 _Event tracker is a web application that aims to make it easier for organizers to manage events and allow for volunteers to be able to apply for the events all on one platform._
@@ -45,16 +45,17 @@ _Event tracker is a web application that aims to make it easier for organizers t
    **4. Michael Holtmann -** _Client_   
    **5. Cengiz Gunay -** _Instructor_
 
-+ ### Team Members Spring 2018:
++ ### Team Members Spring 2019:
   Aaleyah Joseph -- Adefemi Kolawole -- Dionne Mitchner
+  Link to our repository [here][]
 
-  **Comunication tool:** _Discord_ :smiley:  _Reddit_ :smiley: 
-    
+  **Comunication tool:** _Discord_ :smiley:  _Reddit_ :smiley:
+
 
 #### Project Roles:
-   **1. Aaleyah Joseph -** _Team Lead_   
-   **2. Adefemi Kolawole -** _TBA_   
-   **3. Dionne Mitchner -** _TBA_   
+  **1. Aaleyah Joseph -** _Team Manager_, _Client Liaison_,_UI/UX design_ :blue_heart:<br>
+   **2. Adefemi Kolawole -** _Code architecture_, _Testing Lead_   
+   **3. Dionne Mitchner -** _Data Modeller_, _Documentation Lead_   
    **4. Michael Holtmann -** _Client_   
    **5. Cengiz Gunay -** _Instructor_
 
@@ -76,19 +77,8 @@ _Event tracker is a web application that aims to make it easier for organizers t
 ## Acknowledgments
 Special thanks to the following faculty members who helped in directing us in this project.
  *  Dr. Cengiz Gunay
- 
+
 [comment]: # (the following are footnotes and links)
 
 [here]: https://github.com/soft-eng-practicum/event-tracker "Link to Repository"
-[displayA]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayA.PNG  "Load Game Image"
-[displayB]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayB.PNG  "Game UI Image"
-
-
-
-
-
-
-
-
-
 
