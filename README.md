@@ -1,7 +1,7 @@
 
 
 
-# Student Volunteer Website : A Volunteer-tracking app.
+# Student Volunteer Website : A volunteer-tracking app.
 
 ## Motivation
 Event Volunteer Tracking App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
@@ -15,7 +15,8 @@ Click [here][] to view
 ### Team Members Fall 2018:
     Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
   
-    **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk:  
+    **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk: 
+ 
 
 **Progress Tracking:**  _TBA_
 
