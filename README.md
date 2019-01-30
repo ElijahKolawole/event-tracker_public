@@ -1,6 +1,9 @@
+
+# Student Volunteer Website : A volunteer-tracking app.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  
 
 - [Student Volunteer Website : A volunteer-tracking app.](#student-volunteer-website--a-volunteer-tracking-app)
   - [Motivation](#motivation)
@@ -12,11 +15,6 @@
   - [Acknowledgments](#acknowledgments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-
-
-# Student Volunteer Website : A volunteer-tracking app.
 
 ## Motivation
 Event Volunteer Tracking App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
