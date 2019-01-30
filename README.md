@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Student Volunteer Website : A volunteer-tracking app.](#student-volunteer-website--a-volunteer-tracking-app)
+  - [Motivation](#motivation)
+  - [Link to github repository](#link-to-github-repository)
+      - [Project Roles:](#project-roles)
+      - [Project Roles:](#project-roles-1)
+  - [Contributors](#contributors)
+  - [Technology and tools](#technology-and-tools)
+  - [Acknowledgments](#acknowledgments)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 
 
