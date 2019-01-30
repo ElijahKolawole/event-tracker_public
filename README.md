@@ -11,7 +11,7 @@ Click [here](https://github.com/soft-eng-practicum/event-tracker)  to  our repo 
 
 ### Team Members Fall 2018:
     Natanael V. Nistor -- Yiet Mai -- Ammar Huseinspahic
-
+  
     **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk:  
 
 **Progress Tracking:**  _TBA_
@@ -26,16 +26,25 @@ _Event tracker is a web application that aims to make it easier for organizers t
  **4. Michael Holtmann -** _Client_   
  **5. Cengiz Gunay -** _Instructor_
 
-### Team Members Fall 2018:
+### Team Members Spring 2018:
     Aaleyah Joseph -- Adefemi Kolawole -- Dionne Mitchner
 
-    **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk: _Rediit_ :smiley:
-
-
+    **Comunication tool:** _discord_ :smiley: _GroupMe_ :smirk: _Redit_ :smiley:
+    
 ## Motivation
-Event Tracker App. is a web based contining project for event creation and volunteer registration.
+Event Tracker App. is a web based progressing project from a previous team. It's meant for event creation and volunteer registration.
 
-In fulfillment of expectation for ITEC 3870 : Software Development II.
+In fulfillment of expectation and delivearables for ITEC 3870 : Software Development II.
+
+#### Project Roles:
+**1. Aaleyah Joseph -** _Team Lead_   
+ **2. Adefemi Kolawole -** _TBA_   
+ **3. Dionne Mitchner -** _TBA_   
+ **4. Michael Holtmann -** _Client_   
+ **5. Cengiz Gunay -** _Instructor_
+
+
+
 
 [comment]: #---
 ## Contributors
