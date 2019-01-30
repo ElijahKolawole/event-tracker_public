@@ -4,10 +4,6 @@
 # Student Volunteer Website : An event-tacking app.
 
 
-|Loading Game | Game UI      |
-|:-----------:|:----------:  |
-|![DisplayA][]| ![DisplayB][]|
-
 Click [here](https://github.com/soft-eng-practicum/event-tracker)  to  our repo location
 
 
@@ -66,8 +62,7 @@ Special thanks to the following faculty members who helped in directing us in th
 
 [comment]: # (the following are footnotes and links)
 
-[processing.js]: https://processing.org/  "Processing Homepage"
-[here]: https://processing.org/download/  "Processing Download"
+
 [displayA]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayA.PNG  "Load Game Image"
 [displayB]: https://github.com/ElijahKolawole/Whack_an_animal/blob/master/data/displayB.PNG  "Game UI Image"
 
