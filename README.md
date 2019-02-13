@@ -33,7 +33,7 @@ Click [here][] to view
   **Comunication tool:** _Discord_ :smiley: _GroupMe_ :smirk:
 
 
-  **Progress Tracking:**  _TBA_
+  **Progress Tracking:**  JIRA
 
  **Description:**
 _Event tracker is a web application that aims to make it easier for organizers to manage events and allow for volunteers to be able to apply for the events all on one platform._
